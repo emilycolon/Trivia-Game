@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+}
+
+.panel {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.answer {
+  text-align: left;
+}
