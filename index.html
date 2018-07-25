@@ -17,128 +17,152 @@
   <!-- Jumbotron to pick TV Show -->
   <div class="jumbotron">
     <h1>Let's Play Trivia!</h1>
-    <p>
-      <a class="btn btn-primary btn-lg supernatural" href="#" role="button">Supernatural</a>
-      <a class="btn btn-primary btn-lg game-of-thrones" href="#" role="button">Game of Thrones</a>
-      <a class="btn btn-primary btn-lg doctor-who" href="#" role="button">Doctor Who</a>
-    </p>
+    <div class="btn-group btn-group-lg btn-group-vertical" role="group">
+      <a class="btn btn-primary supernatural" href="#" role="button">Supernatural</a>
+      <a class="btn btn-primary game-of-thrones" href="#" role="button">Game of Thrones</a>
+      <a class="btn btn-primary doctor-who" href="#" role="button">Doctor Who</a>
+    </div>
   </div>
 
-  <div class="panel panel-default trivia hidden">
-    <div class="panel-heading question">Panel heading</div>
-    <!-- List group -->
-    <form>
-      <fieldset>
-        <ul class="list-group answers">
-          <li class="list-group-item answer">
-            <input type="radio" name="answer-field" id="answer1" value="1">
-            <label for="answer1" class="answer-field1">Cras justo odio</label>
-          </li>
-          <li class="list-group-item answer">
-            <input type="radio" name="answer-field" id="answer2" value="2">
-            <label for="answer2" class="answer-field2">Cras justo odio</label>
-          </li>
-          <li class="list-group-item answer">
-            <input type="radio" name="answer-field" id="answer3" value="3">
-            <label for="answer3" class="answer-field3">Cras justo odio</label>
-          </li>
-          <li class="list-group-item answer">
-            <input type="radio" name="answer-field" id="answer4" value="4">
-            <label for="answer4" class="answer-field4">Cras justo odio</label>
-          </li>
-        </ul>
-        <input class="btn btn-primary submit" type="submit" value="SUBMIT">
-      </fieldset>
-    </form>
-  </div>
+  <div class="quiz-content">
+    <!-- Panel that shows each question -->
+    <div class="panel panel-default trivia hidden">
+      <div class="panel-heading question">Panel heading</div>
+      <form>
+        <fieldset>
+          <ul class="list-group answers">
+            <li class="list-group-item answer">
+              <input type="radio" name="answer-field" id="answer1" value="1">
+              <label for="answer1" class="answer-field1">Cras justo odio</label>
+            </li>
+            <li class="list-group-item answer">
+              <input type="radio" name="answer-field" id="answer2" value="2">
+              <label for="answer2" class="answer-field2">Cras justo odio</label>
+            </li>
+            <li class="list-group-item answer">
+              <input type="radio" name="answer-field" id="answer3" value="3">
+              <label for="answer3" class="answer-field3">Cras justo odio</label>
+            </li>
+            <li class="list-group-item answer">
+              <input type="radio" name="answer-field" id="answer4" value="4">
+              <label for="answer4" class="answer-field4">Cras justo odio</label>
+            </li>
+          </ul>
+          <input class="btn btn-primary submit" type="submit" value="SUBMIT">
+        </fieldset>
+      </form>
+    </div>
 
-  <div class="show-score hidden">
-    <h2>You got
-      <span class="number"></span> out of 10 correct!</h2>
-  </div>
+    <!-- Div that shows score -->
+    <div class="show-score hidden">
+      <h2>You got
+        <span class="number"></span> out of 10 correct!</h2>
+    </div>
 
-  <div class="results hidden">
-    <h3>Question #1</h3>
-    <p>Your answer:
-      <span class="user-answer0"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer0"></span>
-    </p>
-    <h3>Question #2</h3>
-    <p>Your answer:
-      <span class="user-answer1"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer1"></span>
-    </p>
-    <h3>Question #3</h3>
-    <p>Your answer:
-      <span class="user-answer2"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer2"></span>
-    </p>
-    <h3>Question #4</h3>
-    <p>Your answer:
-      <span class="user-answer3"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer3"></span>
-    </p>
-    <h3>Question #5</h3>
-    <p>Your answer:
-      <span class="user-answer4"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer4"></span>
-    </p>
-    <h3>Question #6</h3>
-    <p>Your answer:
-      <span class="user-answer5"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer5"></span>
-    </p>
-    <h3>Question #7</h3>
-    <p>Your answer:
-      <span class="user-answer6"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer6"></span>
-    </p>
-    <h3>Question #8</h3>
-    <p>Your answer:
-      <span class="user-answer7"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer7"></span>
-    </p>
-    <h3>Question #9</h3>
-    <p>Your answer:
-      <span class="user-answer8"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer8"></span>
-    </p>
-    <h3>Question #10</h3>
-    <p>Your answer:
-      <span class="user-answer9"></span>
-    </p>
-    <p>Correct answer:
-      <span class="correct-answer9"></span>
-    </p>
-  </div>
+    <!-- Div that shows each question's submitted response and correct answer -->
+    <div class="results hidden">
+      <div class="q0 alert" role="alert">
+        <h4>Question #1</h4>
+        <span class="icon0 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer0"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer0"></span>
+        </p>
+      </div>
+      <div class="q1 alert" role="alert">
+        <h4>Question #2</h4>
+        <span class="icon1 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer1"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer1"></span>
+        </p>
+      </div>
+      <div class="q2 alert" role="alert">
+        <h4>Question #3</h4>
+        <span class="icon2 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer2"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer2"></span>
+        </p>
+      </div>
+      <div class="q3 alert" role="alert">
+        <h4>Question #4</h4>
+        <span class="icon3 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer3"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer3"></span>
+        </p>
+      </div>
+      <div class="q4 alert" role="alert">
+        <h4>Question #5</h4>
+        <span class="icon4 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer4"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer4"></span>
+        </p>
+      </div>
+      <div class="q5 alert" role="alert">
+        <h4>Question #6</h4>
+        <span class="icon5 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer5"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer5"></span>
+        </p>
+      </div>
+      <div class="q6 alert" role="alert">
+        <h4>Question #7</h4>
+        <span class="icon6 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer6"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer6"></span>
+        </p>
+      </div>
+      <div class="q7 alert" role="alert">
+        <h4>Question #8</h4>
+        <span class="icon7 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer7"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer7"></span>
+        </p>
+      </div>
+      <div class="q8 alert" role="alert">
+        <h4>Question #9</h4>
+        <span class="icon8 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer8"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer8"></span>
+        </p>
+      </div>
+      <div class="q9 alert" role="alert">
+        <h4>Question #10</h4>
+        <span class="icon9 glyphicon" aria-hidden="true"></span>
+        <p>Your answer:
+          <span class="user-answer9"></span>
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Correct answer:
+          <span class="correct-answer9"></span>
+        </p>
+      </div>
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <!-- Include custom Scripts -->
-  <script src="script.js"></script>
-  <!-- required by scripts.js -->
-  <script src="supernatural.js"></script>
-  <script src="got.js"></script>
-  <script src="drwho.js"></script>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <!-- Include custom Scripts -->
+    <script src="script.js"></script>
+    <!-- required by scripts.js -->
+    <script src="supernatural.js"></script>
+    <script src="got.js"></script>
+    <script src="drwho.js"></script>
 </body>
 
 </html>

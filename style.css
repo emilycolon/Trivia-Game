@@ -1,5 +1,24 @@
 body {
   text-align: center;
+  background-color: #FFF;
+  background-image: url('images/multisplash.png');
+  background-size: cover;
+}
+
+.jumbotron {
+  height: 25em;
+  background-color: #FFF;
+  background: #FFF url('images/bluesplash.png') no-repeat fixed center;
+  background-size: contain;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+.btn-group-lg {
+  width: 14em;
+  height: 3em;
 }
 
 .panel {
@@ -9,4 +28,9 @@ body {
 
 .answer {
   text-align: left;
+}
+
+.alert {
+  margin: 0 auto;
+  width: 50%;
 }

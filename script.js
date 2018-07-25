@@ -92,6 +92,13 @@ const showResults = () => {
     $(`.correct-answer${i}`).text(
       data[i].answers[parseInt(data[i].correctAnswer)]
     );
+    if (results[i].correct) {
+      $(`.q${i}`).addClass('alert-success');
+      $(`.icon${i}`).addClass('glyphicon-ok');
+    } else {
+      $(`.q${i}`).addClass('alert-danger');
+      $(`.icon${i}`).addClass('glyphicon-remove');
+    }
   }
 };
 
