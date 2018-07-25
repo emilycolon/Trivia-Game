@@ -29,12 +29,12 @@ const supernatural = {
       question:
         'Which supernatural being can be identified easiest through a CCTV camera?',
       answers: {
-        1: 'Shapeshifter',
+        4: 'Shapeshifter',
         2: 'Vampire',
         3: 'Ghost',
-        4: 'Wendigo'
+        1: 'Wendigo'
       },
-      correctAnswer: '1'
+      correctAnswer: '4'
     },
     {
       question: 'How many years older than Sam is Dean?',
@@ -49,64 +49,64 @@ const supernatural = {
     {
       question: 'Who was the demon that killed Mary and Jess?',
       answers: {
-        1: 'Azazel',
+        3: 'Azazel',
         2: 'Crowley',
-        3: 'Alistair',
+        1: 'Alistair',
         4: 'Meg'
       },
-      correctAnswer: '1'
+      correctAnswer: '3'
     },
     {
       question:
         'The Archangel Gabriel was originally introduced under a different persona, but by what name was the trickster officially known?',
       answers: {
-        1: 'Loki',
+        3: 'Loki',
         2: 'Lilith',
-        3: 'Papa Legba',
+        1: 'Papa Legba',
         4: 'Coyote'
       },
-      correctAnswer: '1'
+      correctAnswer: '3'
     },
     {
       question: 'Who brought Castiel back from Purgatory?',
       answers: {
-        1: 'Naomi',
+        4: 'Naomi',
         2: 'Zachariah',
         3: 'God',
-        4: 'Michael'
+        1: 'Michael'
       },
-      correctAnswer: '1'
+      correctAnswer: '4'
     },
     {
       question: 'In the episode "The Benders", what was killing people?',
       answers: {
-        1: 'Humans',
+        4: 'Humans',
         2: 'Vampires',
         3: 'Rawheads',
-        4: 'Reapers'
+        1: 'Reapers'
       },
-      correctAnswer: '1'
+      correctAnswer: '4'
     },
     {
       question: 'Who says this in "Yellow Fever"? "I\'ll man the flashlight!"',
       answers: {
-        1: 'Dean',
-        2: 'Sam',
+        2: 'Dean',
+        1: 'Sam',
         3: 'Cas',
         4: 'Bobby'
       },
-      correctAnswer: '1'
+      correctAnswer: '2'
     },
     {
       question:
         'What was the name of Sam\'s girlfriend that died in the "Pilot" episode?',
       answers: {
-        1: 'Jess',
+        4: 'Jess',
         2: 'Ruby',
         3: 'Meg',
-        4: 'Cassie'
+        1: 'Cassie'
       },
-      correctAnswer: '1'
+      correctAnswer: '4'
     }
   ]
 };
