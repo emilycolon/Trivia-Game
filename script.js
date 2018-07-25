@@ -14,11 +14,21 @@ const getTrivia = () => {
 
 const showQuestion = () => {
   // Show the trivia div on the page
+  $('.jumbotron').addClass('hidden');
   $('.trivia').removeClass('hidden');
+  updateProgressBar();
   // Add a question to the div - var question will increase when an
   // answer is submitted in order to then display the next question
   $('.question').text(data[question].question);
   showChoices(data);
+};
+
+const updateProgressBar = () => {
+  $('.progress-bar').attr({
+    'aria-valuenow': `${question}0`,
+    style: `width: ${question}0%;`
+  });
+  $('.sr-only').text(`${question}0% Complete`);
 };
 
 const showChoices = () => {
