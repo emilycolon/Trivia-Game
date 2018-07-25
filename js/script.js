@@ -8,7 +8,7 @@ let question = 0;
 let results = [];
 
 const getTrivia = () => {
-  // Pull the correct trivia object
+  // Pull the correct trivia object based on the show chosen
   return show.trivia;
 };
 
@@ -24,6 +24,7 @@ const showQuestion = () => {
 };
 
 const updateProgressBar = () => {
+  // Update the progress bar to show progress in relation to 10 quiz questions
   $('.progress-bar').attr({
     'aria-valuenow': `${question}0`,
     style: `width: ${question}0%;`
@@ -45,26 +46,16 @@ const checkUserAnswer = answer => {
   let correct = data[question].correctAnswer;
   /* Compare the users answer to the correct answer and push the 
   resulting info to an array */
-  if (answer === correct) {
-    results.push({
-      question: question,
-      response: answer,
-      correct: true
-    });
-  } else {
-    results.push({
-      question: question,
-      response: answer,
-      correct: false
-    });
-  }
+  answer === correct
+    ? results.push({ question: question, response: answer, correct: true })
+    : results.push({ question: question, response: answer, correct: false });
   showNextQuestion();
 };
 
 const showNextQuestion = () => {
   /* Checks to see what question was displayed 
   If any remaining questions, will start loop of show question,
-  populate answers, etc again */
+  populate answers, etc. again */
   if (question < 9) {
     question++;
     showQuestion();
@@ -102,13 +93,9 @@ const showResults = () => {
     $(`.correct-answer${i}`).text(
       data[i].answers[parseInt(data[i].correctAnswer)]
     );
-    if (results[i].correct) {
-      $(`.q${i}`).addClass('alert-success');
-      $(`.icon${i}`).addClass('glyphicon-ok');
-    } else {
-      $(`.q${i}`).addClass('alert-danger');
-      $(`.icon${i}`).addClass('glyphicon-remove');
-    }
+    results[i].correct
+      ? $(`.q${i}`).addClass('alert-success')
+      : $(`.q${i}`).addClass('alert-danger');
   }
 };
 
@@ -117,9 +104,11 @@ $(document).ready(() => {
   $('.supernatural').click(e => {
     // Prevent Default Behavior
     e.preventDefault();
+    // Set show to equal the button clicked
     show = supernatural;
     // Get Correct Trivia Object
     data = getTrivia();
+    // Send the trivia data to the showQuestion function to start the game
     showQuestion();
   });
 
@@ -127,9 +116,11 @@ $(document).ready(() => {
   $('.game-of-thrones').click(e => {
     // Prevent Default Behavior
     e.preventDefault();
+    // Set show to equal the button clicked
     show = gameOfThrones;
     // Get Correct Trivia Object
     data = getTrivia(show);
+    // Send the trivia data to the showQuestion function to start the game
     showQuestion(data);
   });
 
@@ -137,9 +128,11 @@ $(document).ready(() => {
   $('.doctor-who').click(e => {
     // Prevent Default Behavior
     e.preventDefault();
+    // Set show to equal the button clicked
     show = doctorWho;
     // Get Correct Trivia Object
     data = getTrivia(show);
+    // Send the trivia data to the showQuestion function to start the game
     showQuestion(data);
   });
 
@@ -147,9 +140,8 @@ $(document).ready(() => {
   $('.submit').click(e => {
     // Prevent Defualt Form Submit Behavior
     e.preventDefault();
-    // Assign selected answer to variable
-    let userAnswer = $('input[name=answer-field]:checked').val();
-    checkUserAnswer(userAnswer);
+    // Send the users answer to the checkUserAnswer function to be checked and stored
+    checkUserAnswer($('input[name=answer-field]:checked').val());
   });
 
   // When button with "refresh" class is clicked
