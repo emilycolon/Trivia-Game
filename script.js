@@ -141,4 +141,10 @@ $(document).ready(() => {
     let userAnswer = $('input[name=answer-field]:checked').val();
     checkUserAnswer(userAnswer);
   });
+
+  // When button with "refresh" class is clicked
+  $('.refresh').click(e => {
+    // Reload the page
+    location.reload();
+  });
 });

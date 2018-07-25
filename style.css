@@ -1,15 +1,12 @@
-body {
+body, .jumbotron {
   text-align: center;
-  background-color: #FFF;
-  background-image: url('images/multisplash.png');
-  background-size: cover;
+  background: rgb(0, 0, 0) url('images/bluesplash.png') no-repeat fixed center;
+  background-size: contain;
 }
 
 .jumbotron {
   height: 25em;
-  background-color: #FFF;
-  background: #FFF url('images/bluesplash.png') no-repeat fixed center;
-  background-size: contain;
+  color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -21,16 +18,61 @@ h1 {
   height: 3em;
 }
 
+.supernatural {
+  background-image: url('images/supernatural.jpg') !important;
+  background-size: cover !important;
+}
+
+.game-of-thrones {
+  background-image: url('images/game-of-thrones.jpg') !important;
+  background-size: cover !important;
+}
+
+.doctor-who {
+  background-image: url('images/doctor-who.jpg') !important;
+  background-size: cover !important;
+}
+
 .panel {
   margin: 0 auto;
   width: 75%;
+}
+
+.panel-heading {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.list-group-item {
+  background-color: rgba(238, 238, 238, 0.5)
+}
+
+.submit {
+  margin-bottom: 1em;
 }
 
 .answer {
   text-align: left;
 }
 
+.show-score {
+  color: rgb(255, 255, 255);
+  margin-bottom: 3em;
+}
+
 .alert {
-  margin: 0 auto;
+  margin: 1em auto;
   width: 50%;
+}
+
+.results {
+  margin-bottom: 10em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0)
 }
