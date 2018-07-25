@@ -6,7 +6,7 @@
 const supernatural = {
   trivia: [
     {
-      q: 'What girl did Dean go live with when Sam went to hell?',
+      q: 'What woman did Dean go live with when Sam went to hell?',
       1: 'Lisa',
       2: 'Cassie',
       3: 'Ruby',

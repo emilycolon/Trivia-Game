@@ -8,76 +8,76 @@ const doctorWho = {
     {
       q:
         'When the Doctor meets Amelia Pond, what is it that he eats and actually likes?',
-      a: 'Fish fingers and custard',
-      b: 'An apple',
-      c: 'A banana',
-      d: 'Pie'
+      1: 'Fish fingers and custard',
+      2: 'An apple',
+      3: 'A banana',
+      4: 'Pie'
     },
     {
       q: 'Which one of the following is given the nickname "Potato Heads"?',
-      a: 'Sontarans',
-      b: 'Cyber men',
-      c: 'Daleks',
-      d: 'Ood'
+      1: 'Sontarans',
+      2: 'Cyber men',
+      3: 'Daleks',
+      4: 'Ood'
     },
     {
       q: 'What was Mickey called in the parallel universe?',
-      a: 'Ricky ',
-      b: 'Craig',
-      c: 'Rory',
-      d: 'Adam'
+      1: 'Ricky ',
+      2: 'Craig',
+      3: 'Rory',
+      4: 'Adam'
     },
     {
       q:
         'In "The Christmas Invasion," The Doctor and Rose return to London. Who is the prime minister at the time?',
-      a: 'Harriet Jones ',
-      b: 'Winston Churchill',
-      c: 'Craig Owens',
-      d: 'Donna Noble'
+      1: 'Harriet Jones ',
+      2: 'Winston Churchill',
+      3: 'Craig Owens',
+      4: 'Donna Noble'
     },
     {
       q: 'Where did The Doctor and Rose first meet Captain Jack?',
-      a: 'World War II',
-      b: 'Gallifrey',
-      c: 'Skaro',
-      d: 'Mars'
+      1: 'World War II',
+      2: 'Gallifrey',
+      3: 'Skaro',
+      4: 'Mars'
     },
     {
       q: 'Who was the 9th Doctor played by?',
-      a: 'Christopher Eccleston ',
-      b: 'David Tennant',
-      c: 'Matt Smith',
-      d: 'Paul McGann'
+      1: 'Christopher Eccleston ',
+      2: 'David Tennant',
+      3: 'Matt Smith',
+      4: 'Paul McGann'
     },
     {
       q:
         'Which one of the following villains is also a timelord like the Doctor?',
-      a: 'The Master',
-      b: 'Cyber Men',
-      c: 'Ood',
-      d: 'Abzorbalof'
+      1: 'The Master',
+      2: 'Cyber Men',
+      3: 'Ood',
+      4: 'Abzorbalof'
     },
     {
       q: 'Where is "Doctor Who" mainly filmed?',
-      a: 'Cardiff, Wales',
-      b: 'London, England',
-      c: 'Edinburgh, Scotland',
-      d: 'Cambridge, England'
+      1: 'Cardiff, Wales',
+      2: 'London, England',
+      3: 'Edinburgh, Scotland',
+      4: 'Cambridge, England'
     },
     {
       q: 'What was the name of "the last human"?',
-      a: 'Cassandra ',
-      b: 'Rose',
-      c: 'Jack',
-      d: 'Sarah'
+      1: 'Cassandra ',
+      2: 'Rose',
+      3: 'Jack',
+      4: 'Sarah'
     },
     {
       q:
         'Prime Minister of the United Kingdom during the 20th Century. This skilled veteran helped the Doctor defeat the Daleks, and even encountered the Silence in an altered timeline!',
-      a: 'Neville Chamberlain',
-      b: 'Clement Attlee',
-      c: 'Harold Macmillan',
-      d: 'Winston Churchill'
+      1: 'Neville Chamberlain',
+      2: 'Clement Attlee',
+      3: 'Harold Macmillan',
+      4: 'Winston Churchill'
     }
   ]
 };

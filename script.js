@@ -18,24 +18,31 @@ $('.doctor-who') / trivia.doctorWho[i].q/a/b/c/d
 
 */
 let show;
-let quest = 0;
-let answ = 1;
+let question = 0;
 
 const getTrivia = show => {
   return show.trivia;
 };
 
 const showQuestion = data => {
+  // Show the trivia div on the page
   $('.trivia').removeClass('hidden');
-  $('.question').text(data[quest].q);
-  // console.log(data[quest][1]);
-  $('label').text(data[quest][answ]);
-  //   answ++;
+  // Add a question to the div - var question will increase when an
+  // answer is submitted in order to then display the next question
+  $('.question').text(data[question].q);
+  showChoices(data);
+};
+
+const showChoices = data => {
+  let choice = data[question];
+  $.each(choice, (i, val) => {
+    $('.answer-field' + i).text(val);
+  });
 };
 
 $(document).ready(() => {
   $('.supernatural').on('click', e => {
-    // Prevent Default Form Submit Behavior
+    // Prevent Default Behavior
     e.preventDefault();
     let show = supernatural;
     // Get Correct Trivia Object
@@ -44,16 +51,20 @@ $(document).ready(() => {
   });
 
   $('.game-of-thrones').click(e => {
-    // Prevent Default Form Submit Behavior
+    // Prevent Default Behavior
     e.preventDefault();
+    let show = gameOfThrones;
     // Get Correct Trivia Object
-    getTrivia(gameOfThrones);
+    let data = getTrivia(show);
+    showQuestion(data);
   });
 
   $('.doctor-who').click(e => {
-    // Prevent Default Form Submit Behavior
+    // Prevent Default Behavior
     e.preventDefault();
+    let show = doctorWho;
     // Get Correct Trivia Object
-    getTrivia(doctorWho);
+    let data = getTrivia(show);
+    showQuestion(data);
   });
 });
