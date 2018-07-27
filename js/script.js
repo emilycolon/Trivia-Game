@@ -47,8 +47,8 @@ const checkUserAnswer = answer => {
   /* Compare the users answer to the correct answer and push the 
   resulting info to an array */
   answer === correct
-    ? results.push({ question: question, response: answer, correct: true })
-    : results.push({ question: question, response: answer, correct: false });
+    ? results.push({ question, response: answer, correct: true })
+    : results.push({ question, response: answer, correct: false });
   showNextQuestion();
 };
 
