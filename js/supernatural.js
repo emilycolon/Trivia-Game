@@ -1,6 +1,5 @@
 /*
- * Script for index.html
- * requires scripts.js
+ * Supernatural Trivia Data
  */
 
 const supernatural = {

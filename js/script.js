@@ -107,9 +107,9 @@ $(document).ready(() => {
     // Set show to equal the button clicked
     show = supernatural;
     // Get Correct Trivia Object
-    data = getTrivia();
+    data = getTrivia(show);
     // Send the trivia data to the showQuestion function to start the game
-    showQuestion();
+    showQuestion(data);
   });
 
   // When button for "Game of Thrones" Quiz is clicked

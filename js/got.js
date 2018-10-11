@@ -1,6 +1,5 @@
 /*
- * Script for index.html
- * requires scripts.js
+ * Game of Thrones Trivia Data
  */
 
 const gameOfThrones = {

@@ -1,6 +1,5 @@
 /*
- * Script for index.html
- * requires scripts.js
+ * Doctor Who Trivia Data
  */
 
 const doctorWho = {
